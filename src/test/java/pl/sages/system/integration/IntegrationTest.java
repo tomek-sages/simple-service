@@ -65,7 +65,7 @@ public class IntegrationTest
 			Executor executor = Executor.newInstance();
 			HttpResponse response = executor.execute(Request.Get("http://localhost:9111/system/system/v1/ping?input=cba")).returnResponse();
 			assertThat(response, notNullValue());
-			assertThat(response.getStatusLine().getStatusCode(), CoreMatchers.is(400));
+			assertThat(response.getStatusLine().getStatusCode(), CoreMatchers.is(401));
 		}
 
 	@AfterClass
