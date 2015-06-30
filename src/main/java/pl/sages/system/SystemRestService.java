@@ -19,12 +19,6 @@ public class SystemRestService
 	public Response ping(@QueryParam("input") String input)
 	{
 
-		if(StringUtils.isNotBlank(input) && input.equals("tomek"))
-		{
-			String a = null;
-			a.toLowerCase();
-		}
-
 		String result = systemManager.check(input);
 		return result.equals("OK!") ? Response.ok(result).build() :
 				Response.status(Response.Status.BAD_REQUEST).entity(result).build();
