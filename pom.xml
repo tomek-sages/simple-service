@@ -274,6 +274,16 @@
         <plugins>
 
             <plugin>
+                <groupId>com.lazerycode.jmeter</groupId> <artifactId>jmeter-maven-plugin</artifactId> <version>1.8.1</version>
+                <configuration>
+                    <testResultsTimestamp>false</testResultsTimestamp>
+                    <overrideRootLogLevel>DEBUG</overrideRootLogLevel>
+                    <suppressJMeterOutput>false</suppressJMeterOutput>
+                    <ignoreResultFailures>false</ignoreResultFailures>
+                </configuration>
+           </plugin>
+
+            <plugin>
                 <groupId>com.smartbear.soapui</groupId>
                 <artifactId>soapui-maven-plugin</artifactId>
                 <version>4.6.1</version>
